@@ -15,3 +15,7 @@ export { default as JestImgUrl } from "./jest.svg";
 export { default as PuppeteerImgUrl } from "./puppeteer.png";
 export { default as NodeJsImgUrl } from "./nodejs.svg";
 export { default as ReduxImgUrl } from "./redux.svg";
+export { default as GitHubImgUrl } from "./github.svg";
+export { default as TelegramImgUrl } from "./telegram.svg";
+export { default as VkImgUrl } from "./vk.svg";
+export { default as EmailImgUrl } from "./email.svg";

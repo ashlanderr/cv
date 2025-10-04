@@ -9,6 +9,8 @@ import {
   CiCdImgUrl,
   Css3ImgUrl,
   DockerImgUrl,
+  EmailImgUrl,
+  GitHubImgUrl,
   Html5ImgUrl,
   JestImgUrl,
   JsImgUrl,
@@ -19,7 +21,9 @@ import {
   ReactQueryImgUrl,
   ReduxImgUrl,
   RxJsImgUrl,
+  TelegramImgUrl,
   TsImgUrl,
+  VkImgUrl,
 } from "./assets";
 import clsx from "clsx";
 
@@ -50,8 +54,8 @@ export function Home() {
       items: [
         "JavaScript: ES2022, Proxy",
         "TypeScript: Generics, Type Mapping",
-        "HTML5: семантическая вёрстка, WebGL",
-        "CSS3: FlexBox, Grid, адаптивная вёрстка",
+        "HTML5: семантика, WebGL",
+        "CSS3: FlexBox, Grid, Tailwind",
       ],
     },
     {
@@ -60,7 +64,7 @@ export function Home() {
       items: [
         "React: Hooks, Suspense, Context API",
         "Angular: RxJS",
-        "State Management: Redux, MobX, Zustand",
+        "Redux, MobX, Zustand",
         "Babylon.js",
       ],
     },
@@ -79,7 +83,7 @@ export function Home() {
       special: false,
       items: [
         "React Dev Tools",
-        "Chrome Dev Tools: Performance, Network",
+        "Chrome Dev Tools",
         "Lazy loading, Code splitting",
         "ESLint, Prettier",
       ],
@@ -98,21 +102,37 @@ export function Home() {
       label: "Тимлидство",
       special: true,
       items: [
-        "Продумывание архитектуры и типизации",
-        "Общение с дизайнерами и менеджерами",
-        "Scrum, Kanban, планирование спринтов",
-        "Тайм-менеджмент и приоритизация задач",
+        "Архитектура и типизация",
+        "Работа с дизайном и PM",
+        "Scrum, Kanban, планирование",
+        "Тайм-менеджмент, приоритизация",
         "Оптимизация производительности",
-        "Рефакторинг и поддержка легаси кода",
+        "Рефакторинг и поддержка легаси",
       ],
     },
   ];
 
   const contacts = [
-    { label: "GitHub", link: "https://github.com/ashlanderr" },
-    { label: "Telegram", link: "https://t.me/ashlanderr" },
-    { label: "ВКонтакте", link: "https://vk.ru/ashlanderr" },
-    { label: "Почта", link: "mailto:aleksandr.schilow2012@gmail.com" },
+    {
+      label: "GitHub",
+      link: "https://github.com/ashlanderr",
+      icon: GitHubImgUrl,
+    },
+    {
+      label: "Telegram",
+      link: "https://t.me/ashlanderr",
+      icon: TelegramImgUrl,
+    },
+    {
+      label: "ВКонтакте",
+      link: "https://vk.ru/ashlanderr",
+      icon: VkImgUrl,
+    },
+    {
+      label: "Почта",
+      link: "mailto:aleksandr.schilow2012@gmail.com",
+      icon: EmailImgUrl,
+    },
   ];
 
   return (
@@ -126,16 +146,34 @@ export function Home() {
           />
           <div className="flex flex-1 flex-col">
             <div className="text-3xl">Александр Шилов</div>
-            <div className="text-lg text-gray-500">
+            <div className="text-md text-gray-500">
               Senior Frontend Developer
             </div>
+            <ul className="mt-2 -mb-2 flex flex-wrap">
+              {contacts.map((contact) => (
+                <li className="mr-6 mb-2 text-lg text-blue-800 hover:text-blue-600">
+                  <a
+                    className="flex items-center gap-1"
+                    href={contact.link}
+                    target="_blank"
+                  >
+                    <img
+                      className="h-4 w-4"
+                      src={contact.icon}
+                      alt={contact.label}
+                    />
+                    <span>{contact.label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <div className="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4 xl:col-span-2">
           <div className="text-3xl">Ключевые навыки</div>
-          <ul className="flex flex-wrap gap-4">
+          <ul className="-mb-4 flex flex-wrap">
             {keySkills.map((skill) => (
-              <li className="flex gap-1" key={skill.label}>
+              <li className="mr-6 mb-4 flex gap-1" key={skill.label}>
                 <img className="h-6 w-6" src={skill.image} alt={skill.label} />
                 <span>{skill.label}</span>
               </li>
@@ -160,18 +198,6 @@ export function Home() {
             </ul>
           </div>
         ))}
-        <div className="hidden rounded-2xl bg-gray-100 p-4">
-          <div className="text-2xl">Контакты</div>
-          <ul className="mt-2 ml-6 list-disc">
-            {contacts.map((contact) => (
-              <li className="text-gray-900 underline hover:text-gray-600">
-                <a href={contact.link} target="_blank">
-                  {contact.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
       <div className="flex flex-col gap-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
