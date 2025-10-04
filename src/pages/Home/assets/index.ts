@@ -1,0 +1,17 @@
+export { default as AvatarImgUrl } from "./avatar.jpg";
+export { default as JsImgUrl } from "./js.svg";
+export { default as TsImgUrl } from "./ts.svg";
+export { default as Html5ImgUrl } from "./html5.svg";
+export { default as Css3ImgUrl } from "./css3.svg";
+export { default as ReactImgUrl } from "./react.svg";
+export { default as AngularImgUrl } from "./angular.svg";
+export { default as MaterialImgUrl } from "./material.svg";
+export { default as ReactQueryImgUrl } from "./react-query.png";
+export { default as RxJsImgUrl } from "./rxjs.png";
+export { default as AnsibleImgUrl } from "./ansible.svg";
+export { default as DockerImgUrl } from "./docker.svg";
+export { default as CiCdImgUrl } from "./ci-cd.svg";
+export { default as JestImgUrl } from "./jest.svg";
+export { default as PuppeteerImgUrl } from "./puppeteer.png";
+export { default as NodeJsImgUrl } from "./nodejs.svg";
+export { default as ReduxImgUrl } from "./redux.svg";

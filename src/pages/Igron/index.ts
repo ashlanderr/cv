@@ -1,2 +1,2 @@
 export * from "./Igron.tsx";
-export { ThreeDImgUrl } from "./assets";
+export { PreviewImgUrl } from "./assets";
