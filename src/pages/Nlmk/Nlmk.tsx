@@ -1,10 +1,5 @@
 import { Link } from "react-router";
-import {
-  AnalyticsImgUrl,
-  ArchitectureImgUrl,
-  RecommendationsImgUrl,
-  VisualImgUrl,
-} from "./assets";
+import { VisualImgUrl } from "./assets";
 
 export function Nlmk() {
   return (
@@ -17,7 +12,7 @@ export function Nlmk() {
           их&nbsp;плавление и&nbsp;статистику процессов, поддерживает
           исторические сценарии, модульную конфигурацию печей и&nbsp;систему
           рекомендаций для&nbsp;горновых. Из-за&nbsp;NDA часть внутренних
-          деталей скрыта, а&nbsp;некоторые скриншоты заменены демонстрационными.
+          деталей скрыта, и&nbsp;получилось показать только один скрин.
         </p>
       </div>
       <div className="flex flex-col items-baseline gap-4 text-xl md:text-3xl xl:flex-row">
@@ -57,16 +52,16 @@ export function Nlmk() {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col items-start gap-8 xl:flex-row" id="visual">
-        <img
-          className="min-w-0 flex-2 rounded-2xl border-2"
-          src={VisualImgUrl}
-          alt="Визуал"
-          width={1429}
-          height={917}
-        />
-        <div className="flex flex-1 flex-col gap-4">
-          <h2 className="text-2xl leading-tight text-balance">
+      <img
+        className="w-full rounded-2xl border-2"
+        src={VisualImgUrl}
+        alt="Визуал"
+        width={1429}
+        height={917}
+      />
+      <div className="-mb-16 columns-1 gap-16 xl:mb-0 xl:columns-2">
+        <section className="mb-16 break-inside-avoid-column" id="visual">
+          <h2 className="mb-4 text-2xl leading-tight text-balance">
             Визуализация доменной печи в&nbsp;реальном времени
           </h2>
           <p className="text-lg leading-relaxed text-pretty">
@@ -78,24 +73,12 @@ export function Nlmk() {
             наведению, что упрощает анализ и&nbsp;ускоряет принятие решений
             о&nbsp;выпуске или&nbsp;корректировке подачи топлива.
           </p>
-        </div>
-      </div>
-      <div
-        className="flex flex-col items-start gap-8 xl:flex-row-reverse"
-        id="architecture"
-      >
-        <img
-          className="flex min-w-0 flex-2 rounded-2xl border-2"
-          src={ArchitectureImgUrl}
-          alt="Архитектура"
-          width={1920}
-          height={993}
-        />
-        <div className="flex flex-1 flex-col gap-4">
-          <h2 className="text-2xl leading-tight text-balance">
+        </section>
+        <section className="mb-16 break-inside-avoid-column" id="architecture">
+          <h2 className="mb-4 text-2xl leading-tight text-balance">
             Модульный конструктор и&nbsp;конфигурация печей
           </h2>
-          <p className="text-lg leading-relaxed text-pretty">
+          <p className="mb-4 text-lg leading-relaxed text-pretty">
             Реализовал «плагинную» архитектуру фронтенда, где доменная печь
             собирается из&nbsp;множества мелких компонентов со&nbsp;слотами
             для&nbsp;вложений. Это позволило использовать один
@@ -109,22 +92,12 @@ export function Nlmk() {
             их&nbsp;движения. Благодаря этому интерфейс адаптируется
             под&nbsp;конкретный объект без&nbsp;переписывания кода.
           </p>
-        </div>
-      </div>
-      <img
-        className="w-full min-w-0 rounded-2xl border-2"
-        src={AnalyticsImgUrl}
-        alt="Аналитика"
-        id="analytics"
-        width={1920}
-        height={993}
-      />
-      <div className="flex w-full flex-col gap-4">
-        <h2 className="text-2xl leading-tight text-balance">
-          Интеграция данных и&nbsp;исторические сценарии
-        </h2>
-        <div className="flex flex-col gap-4 xl:flex-row xl:gap-8">
-          <p className="flex-1 text-lg leading-relaxed text-pretty">
+        </section>
+        <section className="mb-16 break-inside-avoid-column" id="analytics">
+          <h2 className="mb-4 text-2xl leading-tight text-balance">
+            Интеграция данных и&nbsp;исторические сценарии
+          </h2>
+          <p className="mb-4 flex-1 text-lg leading-relaxed text-pretty">
             Реализовал подключение к&nbsp;нескольким API с&nbsp;обновлением
             данных в&nbsp;реальном времени через react-query и&nbsp;поллинг.
             Компоненты печи автоматически подгружают и&nbsp;синхронизируют свои
@@ -138,21 +111,15 @@ export function Nlmk() {
             но&nbsp;и&nbsp;графики перестраиваются, позволяя анализировать
             прошлые выпуски и&nbsp;сопоставлять параметры с&nbsp;результатами.
           </p>
-        </div>
-      </div>
-      <div className="flex flex-col gap-8 xl:flex-row" id="recommendations">
-        <img
-          className="min-w-0 flex-2 rounded-2xl"
-          src={RecommendationsImgUrl}
-          alt="Рекомендации"
-          width={1920}
-          height={993}
-        />
-        <div className="flex flex-1 flex-col gap-4">
-          <h2 className="text-2xl leading-tight text-balance">
+        </section>
+        <section
+          className="mb-16 break-inside-avoid-column"
+          id="recommendations"
+        >
+          <h2 className="mb-4 text-2xl leading-tight text-balance">
             Система рекомендаций для&nbsp;горновых
           </h2>
-          <p className="text-lg leading-relaxed text-pretty">
+          <p className="mb-4 text-lg leading-relaxed text-pretty">
             Разработал модуль отображения рекомендаций по&nbsp;управлению печью:
             когда начинать выпуск, добавлять материалы или&nbsp;корректировать
             подачу топлива. На&nbsp;«моих» страницах рекомендации представлены
@@ -167,10 +134,10 @@ export function Nlmk() {
             обеспечило прозрачную и&nbsp;предсказуемую работу системы, удобную
             для&nbsp;операторов.
           </p>
-        </div>
+        </section>
       </div>
-      <div className="flex flex-col gap-8 xl:flex-row">
-        <div className="flex flex-2 flex-col gap-4">
+      <div className="flex flex-col gap-16 xl:flex-row">
+        <div className="flex flex-1 flex-col gap-4">
           <h2 className="text-2xl leading-tight text-balance">
             Стек технологий
           </h2>
@@ -202,7 +169,7 @@ export function Nlmk() {
             <li>
               <a
                 className="text-gray-900 underline hover:text-gray-600"
-                href="https://habr.com/ru/companies/nlmk/articles/838714/#:~:text=%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%20%D0%BE%D1%82%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%20%D0%BC%D0%BD%D0%B5%D0%BC%D0%BE%D1%81%D1%85%D0%B5%D0%BC%D1%8B.-,%D0%AD%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D1%83%D0%B5%D0%BC%20%D1%81%203D,-%D0%9D%D0%B5%20%D0%BC%D0%BE%D0%B3%D0%BB%D0%B8%20%D0%BC%D1%8B"
+                href="https://habr.com/ru/companies/nlmk/articles/934696/"
                 target="_blank"
               >
                 Статья на Хабр
