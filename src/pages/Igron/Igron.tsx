@@ -4,7 +4,6 @@ import {
   ScriptsImgUrl,
   ServerImgUrl,
 } from "./assets";
-import { Link } from "react-router";
 
 export function Igron() {
   return (
@@ -16,43 +15,6 @@ export function Igron() {
           редактор игровых объектов, демо-режим, 2D/3D-визуализацию
           и&nbsp;offline-first мультиплеер.
         </p>
-      </div>
-      <div className="flex flex-col items-baseline gap-4 text-xl md:text-3xl xl:flex-row">
-        <span>На проекте я делал:</span>
-        <ul className="flex w-full flex-1 flex-col gap-4 lg:flex-row">
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/igron#multiplayer"
-            >
-              Multiplayer
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/igron#3d"
-            >
-              3D
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/igron#scripts"
-            >
-              Скрипты
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/igron#server"
-            >
-              Сервер
-            </Link>
-          </li>
-        </ul>
       </div>
       <div
         className="flex flex-col items-start gap-8 xl:flex-row"

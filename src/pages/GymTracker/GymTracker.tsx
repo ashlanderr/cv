@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import {
   AnalyticsImgUrl,
   RecommendationImgUrl,
@@ -18,43 +17,6 @@ export function GymTracker() {
           по&nbsp;прогрессии весов, историю тренировок и&nbsp;визуализацию
           оборудования.
         </p>
-      </div>
-      <div className="flex flex-col items-baseline gap-4 text-xl md:text-3xl xl:flex-row">
-        <span>Ключевые фичи:</span>
-        <ul className="flex w-full flex-1 flex-col gap-4 lg:flex-row">
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/gym-tracker#recommendations"
-            >
-              Рекомендации
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/gym-tracker#analytics"
-            >
-              Аналитика
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/gym-tracker#sync"
-            >
-              Синхронизация
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/gym-tracker#weights"
-            >
-              Веса
-            </Link>
-          </li>
-        </ul>
       </div>
       <div className="flex flex-col items-start gap-16 lg:flex-row lg:gap-32">
         <div className="flex flex-1 flex-col gap-16 lg:gap-32">

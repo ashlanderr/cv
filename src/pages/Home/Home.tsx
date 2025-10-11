@@ -152,7 +152,10 @@ export function Home() {
             </div>
             <ul className="mt-2 -mb-2 flex flex-wrap">
               {contacts.map((contact) => (
-                <li className="mr-6 mb-2 text-lg text-blue-800 hover:text-blue-600">
+                <li
+                  className="mr-6 mb-2 text-lg text-blue-800 hover:text-blue-600"
+                  key={contact.link}
+                >
                   <a
                     className="flex items-center gap-1"
                     href={contact.link}
@@ -194,7 +197,7 @@ export function Home() {
             <div className="text-2xl">{group.label}</div>
             <ul className="mt-2 ml-6 list-disc">
               {group.items.map((skill) => (
-                <li>{skill}</li>
+                <li key={skill}>{skill}</li>
               ))}
             </ul>
           </div>

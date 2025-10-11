@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import { PreviewImgUrl } from "./assets";
 
 export function RedForester() {
@@ -12,43 +11,6 @@ export function RedForester() {
           которые превращают визуальные связи в&nbsp;осмысленные процессы —
           от&nbsp;ТЗ и&nbsp;задач до&nbsp;спринтов и&nbsp;канбан-досок.
         </p>
-      </div>
-      <div className="flex flex-col items-baseline gap-4 text-xl md:text-3xl xl:flex-row">
-        <span>Ключевые фичи:</span>
-        <ul className="flex w-full flex-1 flex-col gap-4 lg:flex-row">
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/red-forester#types"
-            >
-              Типы
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/red-forester#architecture"
-            >
-              Архитектура
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/red-forester#performance"
-            >
-              Скорость
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/red-forester#mobx"
-            >
-              MobX
-            </Link>
-          </li>
-        </ul>
       </div>
       <img
         className="w-full rounded-2xl border-2"

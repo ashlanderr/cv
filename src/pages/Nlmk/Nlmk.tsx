@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import { VisualImgUrl } from "./assets";
 
 export function Nlmk() {
@@ -14,43 +13,6 @@ export function Nlmk() {
           рекомендаций для&nbsp;горновых. Из-за&nbsp;NDA часть внутренних
           деталей скрыта, и&nbsp;получилось показать только один скрин.
         </p>
-      </div>
-      <div className="flex flex-col items-baseline gap-4 text-xl md:text-3xl xl:flex-row">
-        <span>На проекте я делал:</span>
-        <ul className="flex w-full flex-1 flex-col gap-4 lg:flex-row">
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/nlmk#visual"
-            >
-              Визуал
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/nlmk#architecture"
-            >
-              Архитектура
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/nlmk#analytics"
-            >
-              Аналитика
-            </Link>
-          </li>
-          <li className="flex flex-1">
-            <Link
-              className="w-full cursor-pointer rounded-4xl border-2 border-gray-600 p-2 text-center hover:bg-gray-100"
-              to="/cv/nlmk#recommendations"
-            >
-              Рекомендации
-            </Link>
-          </li>
-        </ul>
       </div>
       <img
         className="w-full rounded-2xl border-2"
