@@ -88,6 +88,10 @@ export function RedForester() {
             <li>CSS Modules</li>
             <li>MobX</li>
             <li>Webpack</li>
+            <li>NGINX</li>
+            <li>REST API</li>
+            <li>Java Spring</li>
+            <li>PostgreSQL</li>
           </ul>
         </div>
         <div className="flex flex-1 flex-col gap-4">
