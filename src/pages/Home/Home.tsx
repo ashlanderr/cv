@@ -1,6 +1,7 @@
 import { VisualImgUrl as NlmkImgUrl } from "../Nlmk";
 import { PreviewImgUrl as IgronImgUrl } from "../Igron";
 import { PreviewImgUrl as GymTrackerImgUrl } from "../GymTracker";
+import { PreviewImgUrl as RedForesterImgUrl } from "../RedForester";
 import { Link } from "react-router";
 import {
   AngularImgUrl,
@@ -224,14 +225,18 @@ export function Home() {
               src={GymTrackerImgUrl}
               alt="Gym Tracker"
             />
-            <div className="text-lg">Gym Tracker — пэт проект</div>
+            <div className="text-lg">Gym Tracker — Пэт проект</div>
           </Link>
           <Link
             className="flex cursor-pointer flex-col gap-2 transition hover:brightness-95"
-            to="/cv/igron"
+            to="/cv/red-forester"
           >
-            <img className="w-full rounded-2xl" src={IgronImgUrl} alt="Игрон" />
-            <div className="text-lg">TODO — Нужен ещё один проект</div>
+            <img
+              className="w-full rounded-2xl border-2 border-gray-600"
+              src={RedForesterImgUrl}
+              alt="RedForester"
+            />
+            <div className="text-lg">САТЭК — RedForester</div>
           </Link>
         </div>
       </div>
