@@ -2,6 +2,7 @@ import { VisualImgUrl as NlmkImgUrl } from "../Nlmk";
 import { PreviewImgUrl as IgronImgUrl } from "../Igron";
 import { PreviewImgUrl as GymTrackerImgUrl } from "../GymTracker";
 import { PreviewImgUrl as RedForesterImgUrl } from "../RedForester";
+import { PreviewImgUrl as AisExpertImgUrl } from "../AisExpert";
 import { Link } from "react-router";
 import {
   AngularImgUrl,
@@ -240,6 +241,17 @@ export function Home() {
               alt="RedForester"
             />
             <div className="text-lg">САТЭК — RedForester</div>
+          </Link>
+          <Link
+            className="flex cursor-pointer flex-col gap-2 transition hover:brightness-95"
+            to="/cv/ais-expert"
+          >
+            <img
+              className="w-full rounded-2xl"
+              src={AisExpertImgUrl}
+              alt="АИС Эксперт"
+            />
+            <div className="text-lg">Точка Зрения — АИС Эксперт</div>
           </Link>
         </div>
       </div>

@@ -4,7 +4,7 @@ import {
   RouterProvider,
   ScrollRestoration,
 } from "react-router";
-import { GymTracker, Home, Igron, Nlmk, RedForester } from "./pages";
+import { AisExpert, GymTracker, Home, Igron, Nlmk, RedForester } from "./pages";
 
 const RootLayout = () => {
   return (
@@ -25,6 +25,7 @@ const router = createBrowserRouter([
       { path: "nlmk", Component: Nlmk },
       { path: "gym-tracker", Component: GymTracker },
       { path: "red-forester", Component: RedForester },
+      { path: "ais-expert", Component: AisExpert },
     ],
   },
 ]);
