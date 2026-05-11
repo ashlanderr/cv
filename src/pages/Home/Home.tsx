@@ -27,234 +27,263 @@ import {
   TsImgUrl,
   VkImgUrl,
 } from "./assets";
-import clsx from "clsx";
+
+const keySkills = [
+  { label: "JavaScript", image: JsImgUrl },
+  { label: "TypeScript", image: TsImgUrl },
+  { label: "HTML5", image: Html5ImgUrl },
+  { label: "CSS3", image: Css3ImgUrl },
+  { label: "React", image: ReactImgUrl },
+  { label: "React Query", image: ReactQueryImgUrl },
+  { label: "Puppeteer", image: PuppeteerImgUrl },
+  { label: "Angular", image: AngularImgUrl },
+  { label: "Ansible", image: AnsibleImgUrl },
+  { label: "Jest", image: JestImgUrl },
+  { label: "CI/CD", image: CiCdImgUrl },
+  { label: "Redux", image: ReduxImgUrl },
+  { label: "Docker", image: DockerImgUrl },
+  { label: "Node", image: NodeJsImgUrl },
+  { label: "Material", image: MaterialImgUrl },
+  { label: "RxJS", image: RxJsImgUrl },
+];
+
+const allSkills = [
+  {
+    label: "Языки",
+    special: false,
+    items: [
+      "JavaScript: ES2022, Proxy",
+      "TypeScript: Generics, Type Mapping",
+      "HTML5: семантика, WebGL",
+      "CSS3: FlexBox, Grid, Tailwind",
+    ],
+  },
+  {
+    label: "Библиотеки",
+    special: false,
+    items: [
+      "React: Hooks, Suspense, Context API",
+      "Angular: RxJS",
+      "Redux, MobX, Zustand",
+      "Babylon.js, Recharts",
+    ],
+  },
+  {
+    label: "Бэкенд",
+    special: false,
+    items: ["REST API", "React Query", "OAuth, JWT", "Zod, JSON Schema"],
+  },
+  {
+    label: "Тестирование",
+    special: false,
+    items: ["Jest", "Puppeteer", "TDD", "Vitest"],
+  },
+  {
+    label: "Оптимизация и качество",
+    special: false,
+    items: [
+      "React Dev Tools",
+      "Chrome Dev Tools",
+      "Lazy loading, Code splitting",
+      "ESLint, Prettier",
+    ],
+  },
+  {
+    label: "Сборка",
+    special: false,
+    items: ["Webpack, Vite", "NPM, Yarn", "CI / CD", "Docker"],
+  },
+  {
+    label: "Инструменты разработки",
+    special: false,
+    items: ["WebStorm", "VS Code", "Bash", "Git", "Figma"],
+  },
+  {
+    label: "Тимлидство",
+    special: true,
+    items: [
+      "Архитектура и типизация",
+      "Работа с дизайном и PM",
+      "Scrum, Kanban, планирование",
+      "Тайм-менеджмент, приоритизация",
+      "Оптимизация производительности",
+      "Рефакторинг и поддержка легаси",
+    ],
+  },
+];
+
+const contacts = [
+  {
+    label: "GitHub",
+    link: "https://github.com/ashlanderr",
+    icon: GitHubImgUrl,
+  },
+  {
+    label: "Почта",
+    link: "mailto:aleksandr.schilow2012@gmail.com",
+    icon: EmailImgUrl,
+  },
+  {
+    label: "Telegram",
+    link: "https://t.me/ashlanderr",
+    icon: TelegramImgUrl,
+  },
+  {
+    label: "ВКонтакте",
+    link: "https://vk.ru/ashlanderr",
+    icon: VkImgUrl,
+  },
+];
+
+const projects = [
+  {
+    title: "НЛМК — Управление выпусками",
+    img: NlmkImgUrl,
+    to: "/cv/nlmk",
+    alt: "НЛМК",
+  },
+  {
+    title: "Игрон — Настольные игры онлайн",
+    img: IgronImgUrl,
+    to: "/cv/igron",
+    alt: "Игрон",
+  },
+  {
+    title: "Gym Tracker — Пэт проект",
+    img: GymTrackerImgUrl,
+    to: "/cv/gym-tracker",
+    alt: "Gym Tracker",
+  },
+  {
+    title: "САТЭК — RedForester",
+    img: RedForesterImgUrl,
+    to: "/cv/red-forester",
+    alt: "RedForester",
+  },
+  {
+    title: "Точка Зрения — АИС Эксперт",
+    img: AisExpertImgUrl,
+    to: "/cv/ais-expert",
+    alt: "АИС Эксперт",
+  },
+];
 
 export function Home() {
-  const keySkills = [
-    { label: "JavaScript", image: JsImgUrl },
-    { label: "TypeScript", image: TsImgUrl },
-    { label: "HTML5", image: Html5ImgUrl },
-    { label: "CSS3", image: Css3ImgUrl },
-    { label: "React", image: ReactImgUrl },
-    { label: "React Query", image: ReactQueryImgUrl },
-    { label: "Puppeteer", image: PuppeteerImgUrl },
-    { label: "Angular", image: AngularImgUrl },
-    { label: "Ansible", image: AnsibleImgUrl },
-    { label: "Jest", image: JestImgUrl },
-    { label: "CI/CD", image: CiCdImgUrl },
-    { label: "Redux", image: ReduxImgUrl },
-    { label: "Docker", image: DockerImgUrl },
-    { label: "Node", image: NodeJsImgUrl },
-    { label: "Material", image: MaterialImgUrl },
-    { label: "RxJS", image: RxJsImgUrl },
-  ];
-
-  const allSkills = [
-    {
-      label: "Языки",
-      special: false,
-      items: [
-        "JavaScript: ES2022, Proxy",
-        "TypeScript: Generics, Type Mapping",
-        "HTML5: семантика, WebGL",
-        "CSS3: FlexBox, Grid, Tailwind",
-      ],
-    },
-    {
-      label: "Библиотеки",
-      special: false,
-      items: [
-        "React: Hooks, Suspense, Context API",
-        "Angular: RxJS",
-        "Redux, MobX, Zustand",
-        "Babylon.js, Recharts",
-      ],
-    },
-    {
-      label: "Бэкенд",
-      special: false,
-      items: ["REST API", "React Query", "OAuth, JWT", "Zod, JSON Schema"],
-    },
-    {
-      label: "Тестирование",
-      special: false,
-      items: ["Jest", "Puppeteer", "TDD", "Vitest"],
-    },
-    {
-      label: "Оптимизация и качество",
-      special: false,
-      items: [
-        "React Dev Tools",
-        "Chrome Dev Tools",
-        "Lazy loading, Code splitting",
-        "ESLint, Prettier",
-      ],
-    },
-    {
-      label: "Сборка",
-      special: false,
-      items: ["Webpack, Vite", "NPM, Yarn", "CI / CD", "Docker"],
-    },
-    {
-      label: "Инструменты разработки",
-      special: false,
-      items: ["WebStorm", "VS Code", "Bash", "Git", "Figma"],
-    },
-    {
-      label: "Тимлидство",
-      special: true,
-      items: [
-        "Архитектура и типизация",
-        "Работа с дизайном и PM",
-        "Scrum, Kanban, планирование",
-        "Тайм-менеджмент, приоритизация",
-        "Оптимизация производительности",
-        "Рефакторинг и поддержка легаси",
-      ],
-    },
-  ];
-
-  const contacts = [
-    {
-      label: "GitHub",
-      link: "https://github.com/ashlanderr",
-      icon: GitHubImgUrl,
-    },
-    {
-      label: "Telegram",
-      link: "https://t.me/ashlanderr",
-      icon: TelegramImgUrl,
-    },
-    {
-      label: "ВКонтакте",
-      link: "https://vk.ru/ashlanderr",
-      icon: VkImgUrl,
-    },
-    {
-      label: "Почта",
-      link: "mailto:aleksandr.schilow2012@gmail.com",
-      icon: EmailImgUrl,
-    },
-  ];
-
   return (
-    <div className="container mx-auto mt-8 mb-16 flex flex-col gap-8 px-4">
-      <div className="grid grid-cols-1 gap-8 xl:grid-cols-3">
-        <div className="flex gap-4 rounded-2xl bg-gray-100 p-4">
+    <div className="mx-auto max-w-6xl px-5 py-12 md:py-20">
+      <header className="animate-slide-up mb-16 flex flex-col items-center gap-8 md:mb-24 md:flex-row md:items-start md:gap-12">
+        <div className="relative shrink-0">
+          <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-amber-200/60 to-orange-300/40 blur-sm" />
           <img
-            className="h-32 w-32 flex-0 rounded-full object-contain"
+            className="relative h-36 w-36 rounded-2xl object-cover shadow-lg md:h-44 md:w-44"
             src={AvatarImgUrl}
-            alt="Avatar"
+            alt="Александр Шилов"
           />
-          <div className="flex flex-1 flex-col">
-            <div className="text-3xl">Александр Шилов</div>
-            <div className="text-md text-gray-500">
+        </div>
+        <div className="flex flex-col items-center gap-3 md:items-start md:gap-4">
+          <div className="flex flex-col items-center gap-1 md:items-start">
+            <h1 className="font-display text-center text-4xl leading-tight tracking-tight md:text-start md:text-5xl lg:text-6xl">
+              Александр
+              <br />
+              <span className="italic">Шилов</span>
+            </h1>
+            <p className="text-ink-muted mt-1 text-sm tracking-widest uppercase">
               Senior Frontend Developer
-            </div>
-            <ul className="mt-2 -mb-2 flex flex-wrap">
-              {contacts.map((contact) => (
-                <li
-                  className="mr-6 mb-2 text-lg text-blue-800 hover:text-blue-600"
-                  key={contact.link}
-                >
-                  <a
-                    className="flex items-center gap-1"
-                    href={contact.link}
-                    target="_blank"
-                  >
-                    <img
-                      className="h-4 w-4"
-                      src={contact.icon}
-                      alt={contact.label}
-                    />
-                    <span>{contact.label}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            </p>
           </div>
-        </div>
-        <div className="flex flex-col gap-4 rounded-2xl bg-gray-100 p-4 xl:col-span-2">
-          <div className="text-3xl">Ключевые навыки</div>
-          <ul className="-mb-4 flex flex-wrap">
-            {keySkills.map((skill) => (
-              <li className="mr-6 mb-4 flex gap-1" key={skill.label}>
-                <img className="h-6 w-6" src={skill.image} alt={skill.label} />
-                <span>{skill.label}</span>
-              </li>
+          <nav className="mt-1 grid grid-cols-[1fr_1fr] gap-x-6 gap-y-2 md:grid-cols-[auto_auto_auto_auto]">
+            {contacts.map((c) => (
+              <a
+                key={c.link}
+                href={c.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group text-ink-light hover:text-ember flex items-center justify-center gap-1.5 text-sm transition-colors md:justify-start"
+              >
+                <img
+                  className="h-4 w-4 opacity-60 transition-opacity group-hover:opacity-100"
+                  src={c.icon}
+                  alt=""
+                />
+                {c.label}
+              </a>
             ))}
-          </ul>
+          </nav>
         </div>
-      </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {allSkills.map((group) => (
-          <div
-            className={clsx(
-              "rounded-2xl p-4",
-              group.special ? "bg-green-50" : "bg-gray-100",
-            )}
-            key={group.label}
-          >
-            <div className="text-2xl">{group.label}</div>
-            <ul className="mt-2 ml-6 list-disc">
-              {group.items.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div className="flex flex-col gap-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <Link
-            className="flex cursor-pointer flex-col gap-2 transition hover:brightness-95"
-            to="/cv/nlmk"
-          >
-            <img className="w-full rounded-2xl" src={NlmkImgUrl} alt="НЛМК" />
-            <div className="text-lg">НЛМК — Управление выпусками</div>
-          </Link>
-          <Link
-            className="flex cursor-pointer flex-col gap-2 transition hover:brightness-95"
-            to="/cv/igron"
-          >
-            <img className="w-full rounded-2xl" src={IgronImgUrl} alt="Игрон" />
-            <div className="text-lg">Игрон — Настольные игры онлайн</div>
-          </Link>
-          <Link
-            className="flex cursor-pointer flex-col gap-2 transition hover:brightness-95"
-            to="/cv/gym-tracker"
-          >
-            <img
-              className="w-full rounded-2xl bg-gray-100"
-              src={GymTrackerImgUrl}
-              alt="Gym Tracker"
-            />
-            <div className="text-lg">Gym Tracker — Пэт проект</div>
-          </Link>
-          <Link
-            className="flex cursor-pointer flex-col gap-2 transition hover:brightness-95"
-            to="/cv/red-forester"
-          >
-            <img
-              className="w-full rounded-2xl border-2 border-gray-600"
-              src={RedForesterImgUrl}
-              alt="RedForester"
-            />
-            <div className="text-lg">САТЭК — RedForester</div>
-          </Link>
-          <Link
-            className="flex cursor-pointer flex-col gap-2 transition hover:brightness-95"
-            to="/cv/ais-expert"
-          >
-            <img
-              className="w-full rounded-2xl"
-              src={AisExpertImgUrl}
-              alt="АИС Эксперт"
-            />
-            <div className="text-lg">Точка Зрения — АИС Эксперт</div>
-          </Link>
+      </header>
+
+      <section className="animate-slide-up stagger-2 mb-16 md:mb-24">
+        <h2 className="text-ink-muted mb-5 text-xs font-semibold tracking-widest uppercase">
+          Ключевые навыки
+        </h2>
+        <ul className="flex flex-wrap gap-2.5">
+          {keySkills.map((skill, i) => (
+            <li
+              key={skill.label}
+              className={`animate-scale-in stagger-${i + 1} border-border bg-card hover:border-ember/40 flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm shadow-sm transition-all hover:shadow-md`}
+            >
+              <img className="h-5 w-5" src={skill.image} alt="" />
+              <span className="text-ink-light">{skill.label}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="animate-slide-up stagger-4 mb-16 md:mb-24">
+        <h2 className="text-ink-muted mb-5 text-xs font-semibold tracking-widest uppercase">
+          Навыки
+        </h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {allSkills.map((group, i) => (
+            <div
+              key={group.label}
+              className={`animate-slide-up stagger-${Math.min(i + 5, 16)} bg-card rounded-xl border p-5 shadow-sm transition-shadow hover:shadow-md ${
+                group.special
+                  ? "border-ember/30 from-card bg-gradient-to-br to-amber-50/50"
+                  : "border-border"
+              }`}
+            >
+              <h3 className="font-display mb-3 text-xl">{group.label}</h3>
+              <ul className="space-y-1">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="text-ink-light before:bg-ember/40 flex items-start gap-2 text-sm before:mt-2 before:block before:h-1 before:w-1 before:shrink-0 before:rounded-full"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
+
+      <section className="animate-slide-up stagger-6">
+        <h2 className="text-ink-muted mb-5 text-xs font-semibold tracking-widest uppercase">
+          Проекты
+        </h2>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {projects.map((project) => (
+            <Link
+              key={project.to}
+              to={project.to}
+              className="group border-border bg-card relative overflow-hidden rounded-xl border shadow-sm transition-all will-change-transform hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              <img
+                className="aspect-[16/10] w-full object-cover transition-transform duration-500 will-change-transform group-hover:scale-[1.03]"
+                src={project.img}
+                alt={project.alt}
+              />
+              <div className="border-border border-t px-5 py-3.5">
+                <span className="font-display group-hover:text-ember text-lg transition-colors">
+                  {project.title}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
