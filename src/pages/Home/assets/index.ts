@@ -19,3 +19,6 @@ export { default as GitHubImgUrl } from "./github.svg";
 export { default as TelegramImgUrl } from "./telegram.svg";
 export { default as VkImgUrl } from "./vk.svg";
 export { default as EmailImgUrl } from "./email.svg";
+export { default as TailwindImgUrl } from "./tailwind.svg";
+export { default as NextJsImgUrl } from "./nextjs.svg";
+export { default as TrpcImgUrl } from "./trpc.svg";

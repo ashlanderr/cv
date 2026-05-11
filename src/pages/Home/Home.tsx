@@ -5,7 +5,6 @@ import { PreviewImgUrl as RedForesterImgUrl } from "../RedForester";
 import { PreviewImgUrl as AisExpertImgUrl } from "../AisExpert";
 import { Link } from "react-router";
 import {
-  AngularImgUrl,
   AnsibleImgUrl,
   AvatarImgUrl,
   CiCdImgUrl,
@@ -16,34 +15,35 @@ import {
   Html5ImgUrl,
   JestImgUrl,
   JsImgUrl,
-  MaterialImgUrl,
+  NextJsImgUrl,
   NodeJsImgUrl,
   PuppeteerImgUrl,
   ReactImgUrl,
   ReactQueryImgUrl,
-  ReduxImgUrl,
   RxJsImgUrl,
+  TailwindImgUrl,
   TelegramImgUrl,
+  TrpcImgUrl,
   TsImgUrl,
   VkImgUrl,
 } from "./assets";
 
 const keySkills = [
-  { label: "JavaScript", image: JsImgUrl },
   { label: "TypeScript", image: TsImgUrl },
+  { label: "JavaScript", image: JsImgUrl },
   { label: "HTML5", image: Html5ImgUrl },
   { label: "CSS3", image: Css3ImgUrl },
   { label: "React", image: ReactImgUrl },
   { label: "React Query", image: ReactQueryImgUrl },
-  { label: "Puppeteer", image: PuppeteerImgUrl },
-  { label: "Angular", image: AngularImgUrl },
-  { label: "Ansible", image: AnsibleImgUrl },
+  { label: "Tailwind", image: TailwindImgUrl },
+  { label: "NextJS", image: NextJsImgUrl },
+  { label: "tRPC", image: TrpcImgUrl },
   { label: "Jest", image: JestImgUrl },
+  { label: "Puppeteer", image: PuppeteerImgUrl },
+  { label: "Ansible", image: AnsibleImgUrl },
   { label: "CI/CD", image: CiCdImgUrl },
-  { label: "Redux", image: ReduxImgUrl },
   { label: "Docker", image: DockerImgUrl },
   { label: "Node", image: NodeJsImgUrl },
-  { label: "Material", image: MaterialImgUrl },
   { label: "RxJS", image: RxJsImgUrl },
 ];
 
