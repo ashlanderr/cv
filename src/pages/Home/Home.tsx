@@ -99,6 +99,11 @@ const allSkills = [
     items: ["WebStorm", "VS Code", "Bash", "Git", "Figma"],
   },
   {
+    label: "ИИ-разработка",
+    special: false,
+    items: ["KiloCode", "AI Agents", "Prompt Engineering", "LLM API"],
+  },
+  {
     label: "Тимлидство",
     special: true,
     items: [
