@@ -1,7 +1,7 @@
 export default function Igron() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
-      <div className="flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
+      <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
         <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
           Игрон — онлайн-платформа для&nbsp;корпоративных, психологических,
           настольных игр. Поддерживает одиночные и&nbsp;командные сессии,
@@ -10,7 +10,7 @@ export default function Igron() {
         </p>
       </div>
       <div
-        className="flex flex-col items-start gap-8 xl:flex-row"
+        className="animate-slide-up stagger-2 flex flex-col items-start gap-8 xl:flex-row"
         id="multiplayer"
       >
         <img
@@ -40,7 +40,7 @@ export default function Igron() {
         </div>
       </div>
       <div
-        className="flex flex-col items-start gap-8 xl:flex-row-reverse"
+        className="animate-slide-up stagger-4 flex flex-col items-start gap-8 xl:flex-row-reverse"
         id="3d"
       >
         <img
@@ -71,14 +71,14 @@ export default function Igron() {
         </div>
       </div>
       <img
-        className="w-full min-w-0 rounded-2xl border-2"
+        className="animate-scale-in stagger-6 w-full min-w-0 rounded-2xl border-2"
         src="/cv/igron/scripts.webp"
         alt="Scripts"
         id="scripts"
         width={1920}
         height={993}
       />
-      <div className="flex w-full flex-col gap-4">
+      <div className="animate-slide-up stagger-7 flex w-full flex-col gap-4">
         <h2 className="text-2xl leading-tight text-balance">
           Визуальный скриптовый язык для&nbsp;игровой логики
         </h2>
@@ -99,7 +99,7 @@ export default function Igron() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-8 xl:flex-row" id="server">
+      <div className="animate-slide-up stagger-8 flex flex-col gap-8 xl:flex-row" id="server">
         <img
           className="min-w-0 flex-2 rounded-2xl"
           src="/cv/igron/server.webp"
@@ -125,25 +125,15 @@ export default function Igron() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-8 xl:flex-row">
+      <div className="animate-slide-up stagger-9 flex flex-col gap-8 xl:flex-row">
         <div className="flex flex-2 flex-col gap-4">
           <h2 className="text-2xl leading-tight text-balance">
             Стек технологий
           </h2>
           <ul className="flex flex-wrap gap-4">
-            <li>TypeScript</li>
-            <li>Angular</li>
-            <li>HTML</li>
-            <li>SCSS</li>
-            <li>Material</li>
-            <li>Babylon.js</li>
-            <li>PostgreSQL</li>
-            <li>Koa</li>
-            <li>Socket.IO</li>
-            <li>NGINX</li>
-            <li>Node.js</li>
-            <li>Ansible</li>
-            <li>Rust</li>
+            {["TypeScript", "Angular", "HTML", "SCSS", "Material", "Babylon.js", "PostgreSQL", "Koa", "Socket.IO", "NGINX", "Node.js", "Ansible", "Rust"].map((tech, i) => (
+              <li key={tech} className={`animate-scale-in stagger-${Math.min(i + 1, 16)}`}>{tech}</li>
+            ))}
           </ul>
         </div>
         <div className="flex flex-1 flex-col gap-4">
@@ -151,7 +141,7 @@ export default function Igron() {
           <ul className="flex flex-wrap gap-4">
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://psygame-service.online"
                 target="_blank"
               >
@@ -160,7 +150,7 @@ export default function Igron() {
             </li>
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://igron.games"
                 target="_blank"
               >
@@ -169,7 +159,7 @@ export default function Igron() {
             </li>
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://vk.com/psygameservice.online"
                 target="_blank"
               >
@@ -178,7 +168,7 @@ export default function Igron() {
             </li>
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://rutube.ru/channel/28097/"
                 target="_blank"
               >

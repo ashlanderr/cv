@@ -1,7 +1,7 @@
 export default function AisExpert() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
-      <div className="flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
+      <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
         <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
           АИС «Эксперт» — сервис для&nbsp;анализа и&nbsp;выявления нарушений
           в&nbsp;медицинских данных. Использует машинное обучение для
@@ -10,14 +10,14 @@ export default function AisExpert() {
         </p>
       </div>
       <img
-        className="w-full rounded-2xl border-2"
+        className="animate-scale-in stagger-2 w-full rounded-2xl border-2"
         src="/cv/ais-expert/preview.webp"
         alt="Визуал"
         width={1429}
         height={917}
       />
       <div className="-mb-16 columns-1 gap-16 xl:mb-0 xl:columns-2">
-        <section className="mb-16 break-inside-avoid-column">
+        <section className="animate-slide-up stagger-3 mb-16 break-inside-avoid-column">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Вёрстка интерфейсов
           </h2>
@@ -28,7 +28,7 @@ export default function AisExpert() {
             и&nbsp;аналитических панелей с&nbsp;большим объёмом данных.
           </p>
         </section>
-        <section className="mb-16 break-inside-avoid-column">
+        <section className="animate-slide-up stagger-4 mb-16 break-inside-avoid-column">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Интеграция с&nbsp;Vuex и&nbsp;REST&nbsp;API
           </h2>
@@ -39,7 +39,7 @@ export default function AisExpert() {
             информации.
           </p>
         </section>
-        <section className="mb-16 break-inside-avoid-column">
+        <section className="animate-slide-up stagger-5 mb-16 break-inside-avoid-column">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Реальное время и&nbsp;обучение моделей
           </h2>
@@ -55,18 +55,15 @@ export default function AisExpert() {
           </p>
         </section>
       </div>
-      <div className="flex flex-col gap-16 xl:flex-row">
+      <div className="animate-slide-up stagger-6 flex flex-col gap-16 xl:flex-row">
         <div className="flex flex-1 flex-col gap-4">
           <h2 className="text-2xl leading-tight text-balance">
             Стек технологий
           </h2>
           <ul className="flex flex-wrap gap-4">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Vue.js</li>
-            <li>Bootstrap</li>
-            <li>Vuex</li>
-            <li>WebSocket</li>
+            {["HTML", "CSS", "Vue.js", "Bootstrap", "Vuex", "WebSocket"].map((tech, i) => (
+              <li key={tech} className={`animate-scale-in stagger-${Math.min(i + 1, 16)}`}>{tech}</li>
+            ))}
           </ul>
         </div>
         <div className="flex flex-1 flex-col gap-4">
@@ -74,7 +71,7 @@ export default function AisExpert() {
           <ul className="flex flex-wrap gap-4">
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://tochka.ai/"
                 target="_blank"
               >
@@ -83,7 +80,7 @@ export default function AisExpert() {
             </li>
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://tochka.ai/products/tochka-expert/ais-ekspert/"
                 target="_blank"
               >

@@ -1,7 +1,7 @@
 export default function GymTracker() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
-      <div className="flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
+      <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
         <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
           Gym Tracker — мой пет-проект, PWA-приложение
           для&nbsp;автоматизированного учёта силовых тренировок. Работает
@@ -13,7 +13,7 @@ export default function GymTracker() {
       </div>
       <div className="flex flex-col items-start gap-16 lg:flex-row lg:gap-32">
         <div className="flex flex-1 flex-col gap-16 lg:gap-32">
-          <div className="flex flex-col gap-8" id="recommendations">
+          <div className="animate-slide-up stagger-2 flex flex-col gap-8" id="recommendations">
             <div className="flex flex-1 flex-col items-center rounded-4xl bg-gray-200">
               <img
                 className="min-w-0 px-16 py-16 drop-shadow-xl xl:px-32 2xl:px-48"
@@ -37,7 +37,7 @@ export default function GymTracker() {
               </p>
             </div>
           </div>
-          <div className="flex flex-1 flex-col gap-8" id="weights">
+          <div className="animate-slide-up stagger-4 flex flex-1 flex-col gap-8" id="weights">
             <div className="flex flex-1 flex-col items-center rounded-4xl bg-gray-200">
               <img
                 className="min-w-0 px-16 py-16 drop-shadow-xl xl:px-32 2xl:px-48"
@@ -64,7 +64,7 @@ export default function GymTracker() {
         </div>
         <div className="flex flex-1 flex-col gap-16 lg:gap-32">
           <div
-            className="flex flex-col items-start gap-8 lg:flex-col-reverse"
+            className="animate-slide-up stagger-3 flex flex-col items-start gap-8 lg:flex-col-reverse"
             id="analytics"
           >
             <div className="flex flex-col items-center rounded-4xl bg-gray-200">
@@ -91,7 +91,7 @@ export default function GymTracker() {
             </div>
           </div>
           <div
-            className="flex flex-col items-start gap-8 lg:flex-col-reverse"
+            className="animate-slide-up stagger-5 flex flex-col items-start gap-8 lg:flex-col-reverse"
             id="sync"
           >
             <div className="flex flex-1 flex-col items-center rounded-4xl bg-gray-200">
@@ -129,23 +129,15 @@ export default function GymTracker() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-16 xl:flex-row xl:gap-32">
+      <div className="animate-slide-up stagger-6 flex flex-col gap-16 xl:flex-row xl:gap-32">
         <div className="flex flex-1 flex-col gap-4">
           <h2 className="text-2xl leading-tight text-balance">
             Стек технологий
           </h2>
           <ul className="flex flex-wrap gap-4">
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>HTML</li>
-            <li>SCSS</li>
-            <li>Y.js</li>
-            <li>PWA</li>
-            <li>Vite</li>
-            <li>Firebase</li>
-            <li>Recharts</li>
-            <li>Jotai</li>
-            <li>IndexedDB</li>
+            {["TypeScript", "React", "HTML", "SCSS", "Y.js", "PWA", "Vite", "Firebase", "Recharts", "Jotai", "IndexedDB"].map((tech, i) => (
+              <li key={tech} className={`animate-scale-in stagger-${Math.min(i + 1, 16)}`}>{tech}</li>
+            ))}
           </ul>
         </div>
         <div className="flex flex-1 flex-col gap-4">
@@ -153,7 +145,7 @@ export default function GymTracker() {
           <ul className="flex flex-wrap gap-4">
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://github.com/ashlanderr/gym-tracker"
                 target="_blank"
               >
@@ -162,7 +154,7 @@ export default function GymTracker() {
             </li>
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://ashlanderr.github.io/gym-tracker/"
                 target="_blank"
               >

@@ -1,7 +1,7 @@
 export default function RedForester() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
-      <div className="flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
+      <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
         <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
           RedForester (САТЭК) — корпоративный инструмент для&nbsp;управления
           проектами, знаниями и&nbsp;мозговыми штурмами в&nbsp;формате mindmap.
@@ -11,14 +11,14 @@ export default function RedForester() {
         </p>
       </div>
       <img
-        className="w-full rounded-2xl border-2"
+        className="animate-scale-in stagger-2 w-full rounded-2xl border-2"
         src="/cv/red-forester/preview.webp"
         alt="Визуал"
         width={1429}
         height={917}
       />
       <div className="-mb-16 columns-1 gap-16 xl:mb-0 xl:columns-2">
-        <section className="mb-16 break-inside-avoid-column" id="visual">
+        <section className="animate-slide-up stagger-3 mb-16 break-inside-avoid-column" id="visual">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Типизация узлов и&nbsp;автоматизация
           </h2>
@@ -31,7 +31,7 @@ export default function RedForester() {
             инструмент управления проектами.
           </p>
         </section>
-        <section className="mb-16 break-inside-avoid-column" id="architecture">
+        <section className="animate-slide-up stagger-4 mb-16 break-inside-avoid-column" id="architecture">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Переход с&nbsp;jQuery на&nbsp;React и&nbsp;TypeScript.
           </h2>
@@ -46,7 +46,7 @@ export default function RedForester() {
             картах.
           </p>
         </section>
-        <section className="mb-16 break-inside-avoid-column" id="analytics">
+        <section className="animate-slide-up stagger-5 mb-16 break-inside-avoid-column" id="analytics">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Оптимизация производительности
           </h2>
@@ -60,7 +60,7 @@ export default function RedForester() {
           </p>
         </section>
         <section
-          className="mb-16 break-inside-avoid-column"
+          className="animate-slide-up stagger-6 mb-16 break-inside-avoid-column"
           id="recommendations"
         >
           <h2 className="mb-4 text-2xl leading-tight text-balance">
@@ -75,21 +75,15 @@ export default function RedForester() {
           </p>
         </section>
       </div>
-      <div className="flex flex-col gap-16 xl:flex-row">
+      <div className="animate-slide-up stagger-7 flex flex-col gap-16 xl:flex-row">
         <div className="flex flex-1 flex-col gap-4">
           <h2 className="text-2xl leading-tight text-balance">
             Стек технологий
           </h2>
           <ul className="flex flex-wrap gap-4">
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>CSS Modules</li>
-            <li>MobX</li>
-            <li>Webpack</li>
-            <li>NGINX</li>
-            <li>REST API</li>
-            <li>Java Spring</li>
-            <li>PostgreSQL</li>
+            {["TypeScript", "React", "CSS Modules", "MobX", "Webpack", "NGINX", "REST API", "Java Spring", "PostgreSQL"].map((tech, i) => (
+              <li key={tech} className={`animate-scale-in stagger-${Math.min(i + 1, 16)}`}>{tech}</li>
+            ))}
           </ul>
         </div>
         <div className="flex flex-1 flex-col gap-4">
@@ -97,7 +91,7 @@ export default function RedForester() {
           <ul className="flex flex-wrap gap-4">
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://redforester.com/"
                 target="_blank"
               >
@@ -106,7 +100,7 @@ export default function RedForester() {
             </li>
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://beta.app.redforester.com/"
                 target="_blank"
               >

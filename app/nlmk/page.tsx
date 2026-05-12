@@ -1,7 +1,7 @@
 export default function Nlmk() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
-      <div className="flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
+      <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
         <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
           Динамическое управление выпусками (НЛМК) — промышленный сервис
           для&nbsp;визуализации и&nbsp;анализа работы доменных печей.
@@ -13,14 +13,14 @@ export default function Nlmk() {
         </p>
       </div>
       <img
-        className="w-full rounded-2xl border-2"
+        className="animate-scale-in stagger-2 w-full rounded-2xl border-2"
         src="/cv/nlmk/visual.webp"
         alt="Визуал"
         width={1429}
         height={917}
       />
       <div className="-mb-16 columns-1 gap-16 xl:mb-0 xl:columns-2">
-        <section className="mb-16 break-inside-avoid-column" id="visual">
+        <section className="animate-slide-up stagger-3 mb-16 break-inside-avoid-column" id="visual">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Визуализация доменной печи в&nbsp;реальном времени
           </h2>
@@ -34,7 +34,7 @@ export default function Nlmk() {
             о&nbsp;выпуске или&nbsp;корректировке подачи топлива.
           </p>
         </section>
-        <section className="mb-16 break-inside-avoid-column" id="architecture">
+        <section className="animate-slide-up stagger-4 mb-16 break-inside-avoid-column" id="architecture">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Модульный конструктор и&nbsp;конфигурация печей
           </h2>
@@ -53,7 +53,7 @@ export default function Nlmk() {
             под&nbsp;конкретный объект без&nbsp;переписывания кода.
           </p>
         </section>
-        <section className="mb-16 break-inside-avoid-column" id="analytics">
+        <section className="animate-slide-up stagger-5 mb-16 break-inside-avoid-column" id="analytics">
           <h2 className="mb-4 text-2xl leading-tight text-balance">
             Интеграция данных и&nbsp;исторические сценарии
           </h2>
@@ -73,7 +73,7 @@ export default function Nlmk() {
           </p>
         </section>
         <section
-          className="mb-16 break-inside-avoid-column"
+          className="animate-slide-up stagger-6 mb-16 break-inside-avoid-column"
           id="recommendations"
         >
           <h2 className="mb-4 text-2xl leading-tight text-balance">
@@ -96,22 +96,15 @@ export default function Nlmk() {
           </p>
         </section>
       </div>
-      <div className="flex flex-col gap-16 xl:flex-row">
+      <div className="animate-slide-up stagger-7 flex flex-col gap-16 xl:flex-row">
         <div className="flex flex-1 flex-col gap-4">
           <h2 className="text-2xl leading-tight text-balance">
             Стек технологий
           </h2>
           <ul className="flex flex-wrap gap-4">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>Material</li>
-            <li>CSS Modules</li>
-            <li>React Query</li>
-            <li>SVG</li>
-            <li>WebSocket</li>
-            <li>Recharts</li>
+            {["HTML", "CSS", "TypeScript", "React", "Material", "CSS Modules", "React Query", "SVG", "WebSocket", "Recharts"].map((tech, i) => (
+              <li key={tech} className={`animate-scale-in stagger-${Math.min(i + 1, 16)}`}>{tech}</li>
+            ))}
           </ul>
         </div>
         <div className="flex flex-1 flex-col gap-4">
@@ -119,7 +112,7 @@ export default function Nlmk() {
           <ul className="flex flex-wrap gap-4">
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://nlmk.com/"
                 target="_blank"
               >
@@ -128,7 +121,7 @@ export default function Nlmk() {
             </li>
             <li>
               <a
-                className="text-gray-900 underline hover:text-gray-600"
+                className="text-ink-light underline transition-colors hover:text-ember"
                 href="https://habr.com/ru/companies/nlmk/articles/934696/"
                 target="_blank"
               >
