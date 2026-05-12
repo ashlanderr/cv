@@ -6,17 +6,17 @@ const keySkills = [
   { label: "HTML5", image: "/cv/home/html5.svg" },
   { label: "CSS3", image: "/cv/home/css3.svg" },
   { label: "React", image: "/cv/home/react.svg" },
-  { label: "React Query", image: "/cv/home/react-query.png" },
+  { label: "React Query", image: "/cv/home/react-query.webp" },
   { label: "Tailwind", image: "/cv/home/tailwind.svg" },
   { label: "NextJS", image: "/cv/home/nextjs.svg" },
   { label: "tRPC", image: "/cv/home/trpc.svg" },
   { label: "Jest", image: "/cv/home/jest.svg" },
-  { label: "Puppeteer", image: "/cv/home/puppeteer.png" },
+  { label: "Puppeteer", image: "/cv/home/puppeteer.webp" },
   { label: "Ansible", image: "/cv/home/ansible.svg" },
   { label: "CI/CD", image: "/cv/home/ci-cd.svg" },
   { label: "Docker", image: "/cv/home/docker.svg" },
   { label: "Node", image: "/cv/home/nodejs.svg" },
-  { label: "RxJS", image: "/cv/home/rxjs.png" },
+  { label: "RxJS", image: "/cv/home/rxjs.webp" },
 ];
 
 const allSkills = [
@@ -115,31 +115,31 @@ const contacts = [
 const projects = [
   {
     title: "НЛМК — Управление выпусками",
-    img: "/cv/nlmk/visual.png",
+    img: "/cv/nlmk/visual.webp",
     to: "/nlmk",
     alt: "НЛМК",
   },
   {
     title: "Игрон — Настольные игры онлайн",
-    img: "/cv/igron/preview.png",
+    img: "/cv/igron/preview.webp",
     to: "/igron",
     alt: "Игрон",
   },
   {
     title: "Gym Tracker — Пэт проект",
-    img: "/cv/gym-tracker/preview.png",
+    img: "/cv/gym-tracker/preview.webp",
     to: "/gym-tracker",
     alt: "Gym Tracker",
   },
   {
     title: "САТЭК — RedForester",
-    img: "/cv/red-forester/preview.png",
+    img: "/cv/red-forester/preview.webp",
     to: "/red-forester",
     alt: "RedForester",
   },
   {
     title: "Точка Зрения — АИС Эксперт",
-    img: "/cv/ais-expert/preview.png",
+    img: "/cv/ais-expert/preview.webp",
     to: "/ais-expert",
     alt: "АИС Эксперт",
   },
@@ -153,7 +153,7 @@ export default function Home() {
           <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-amber-200/60 to-orange-300/40 blur-sm" />
           <img
             className="relative h-36 w-36 rounded-2xl object-cover shadow-lg md:h-44 md:w-44"
-            src="/cv/home/avatar.jpg"
+            src="/cv/home/avatar.webp"
             alt="Александр Шилов"
           />
         </div>

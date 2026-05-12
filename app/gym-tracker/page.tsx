@@ -17,7 +17,7 @@ export default function GymTracker() {
             <div className="flex flex-1 flex-col items-center rounded-4xl bg-gray-200">
               <img
                 className="min-w-0 px-16 py-16 drop-shadow-xl xl:px-32 2xl:px-48"
-                src="/cv/gym-tracker/recommendations.png"
+                src="/cv/gym-tracker/recommendations.webp"
                 alt="Recommendations"
                 width={1200}
                 height={2574}
@@ -41,7 +41,7 @@ export default function GymTracker() {
             <div className="flex flex-1 flex-col items-center rounded-4xl bg-gray-200">
               <img
                 className="min-w-0 px-16 py-16 drop-shadow-xl xl:px-32 2xl:px-48"
-                src="/cv/gym-tracker/weights.png"
+                src="/cv/gym-tracker/weights.webp"
                 alt="Weights"
                 width={1200}
                 height={2574}
@@ -70,7 +70,7 @@ export default function GymTracker() {
             <div className="flex flex-col items-center rounded-4xl bg-gray-200">
               <img
                 className="min-w-0 px-16 py-16 drop-shadow-xl xl:px-32 2xl:px-48"
-                src="/cv/gym-tracker/analytics.png"
+                src="/cv/gym-tracker/analytics.webp"
                 alt="Analytics"
                 width={1200}
                 height={2574}
@@ -97,7 +97,7 @@ export default function GymTracker() {
             <div className="flex flex-1 flex-col items-center rounded-4xl bg-gray-200">
               <img
                 className="min-w-0 px-16 py-16 drop-shadow-xl"
-                src="/cv/gym-tracker/sync.png"
+                src="/cv/gym-tracker/sync.webp"
                 alt="Sync"
                 width={2109}
                 height={1827}

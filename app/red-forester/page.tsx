@@ -12,7 +12,7 @@ export default function RedForester() {
       </div>
       <img
         className="w-full rounded-2xl border-2"
-        src="/cv/red-forester/preview.png"
+        src="/cv/red-forester/preview.webp"
         alt="Визуал"
         width={1429}
         height={917}
