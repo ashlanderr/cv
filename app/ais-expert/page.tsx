@@ -11,7 +11,7 @@ export default function AisExpert() {
       </div>
       <img
         className="w-full rounded-2xl border-2"
-        src="/ais-expert/preview.png"
+        src="/cv/ais-expert/preview.png"
         alt="Визуал"
         width={1429}
         height={917}

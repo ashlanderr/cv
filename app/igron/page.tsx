@@ -15,7 +15,7 @@ export default function Igron() {
       >
         <img
           className="min-w-0 flex-2 rounded-2xl"
-          src="/igron/multiplayer.png"
+          src="/cv/igron/multiplayer.png"
           alt="Multiplayer"
           width={1920}
           height={993}
@@ -45,7 +45,7 @@ export default function Igron() {
       >
         <img
           className="flex min-w-0 flex-2 rounded-2xl"
-          src="/igron/3d.png"
+          src="/cv/igron/3d.png"
           alt="3D"
           width={1920}
           height={995}
@@ -72,7 +72,7 @@ export default function Igron() {
       </div>
       <img
         className="w-full min-w-0 rounded-2xl border-2"
-        src="/igron/scripts.png"
+        src="/cv/igron/scripts.png"
         alt="Scripts"
         id="scripts"
         width={1920}
@@ -102,7 +102,7 @@ export default function Igron() {
       <div className="flex flex-col gap-8 xl:flex-row" id="server">
         <img
           className="min-w-0 flex-2 rounded-2xl"
-          src="/igron/server.png"
+          src="/cv/igron/server.png"
           alt="Server"
           width={1280}
           height={744}

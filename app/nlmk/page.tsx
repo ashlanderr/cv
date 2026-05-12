@@ -14,7 +14,7 @@ export default function Nlmk() {
       </div>
       <img
         className="w-full rounded-2xl border-2"
-        src="/nlmk/visual.png"
+        src="/cv/nlmk/visual.png"
         alt="Визуал"
         width={1429}
         height={917}
