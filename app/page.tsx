@@ -126,6 +126,30 @@ const contacts = [
   },
 ];
 
+const ownProducts = [
+  {
+    title: "AniRig",
+    subtitle: "Автоматизация создания VTuber-аватаров",
+    img: "/cv/anirig/preview.webp",
+    to: "/anirig",
+    alt: "AniRig",
+  },
+  {
+    title: "NotiBox",
+    subtitle: "Realtime SaaS, замена Pusher",
+    img: "/cv/notibox/preview.webp",
+    to: "/notibox",
+    alt: "NotiBox",
+  },
+  {
+    title: "Gym Tracker",
+    subtitle: "Пэт проект",
+    img: "/cv/gym-tracker/preview.webp",
+    to: "/gym-tracker",
+    alt: "Gym Tracker",
+  },
+];
+
 const projects = [
   {
     title: "НЛМК — Управление выпусками",
@@ -138,12 +162,6 @@ const projects = [
     img: "/cv/igron/preview.webp",
     to: "/igron",
     alt: "Игрон",
-  },
-  {
-    title: "Gym Tracker — Пэт проект",
-    img: "/cv/gym-tracker/preview.webp",
-    to: "/gym-tracker",
-    alt: "Gym Tracker",
   },
   {
     title: "САТЭК — RedForester",
@@ -269,6 +287,35 @@ export default function Home() {
               <div className="border-border border-t px-5 py-3.5">
                 <span className="font-display group-hover:text-ember text-lg transition-colors">
                   {project.title}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="animate-slide-up stagger-8 mt-16">
+        <h2 className="text-ink-muted mb-5 text-xs font-semibold tracking-widest uppercase">
+          Свои продукты
+        </h2>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {ownProducts.map((product) => (
+            <Link
+              key={product.to}
+              href={product.to}
+              className="group border-border bg-card relative overflow-hidden rounded-xl border shadow-sm transition-all will-change-transform hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              <img
+                className="aspect-[16/10] w-full object-cover transition-transform duration-500 will-change-transform group-hover:scale-[1.03]"
+                src={product.img}
+                alt={product.alt}
+              />
+              <div className="border-border flex flex-col gap-0.5 border-t px-5 py-3.5">
+                <span className="font-display group-hover:text-ember text-lg transition-colors">
+                  {product.title}
+                </span>
+                <span className="text-ink-muted text-sm">
+                  {product.subtitle}
                 </span>
               </div>
             </Link>
