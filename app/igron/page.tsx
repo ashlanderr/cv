@@ -2,12 +2,17 @@ export default function Igron() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
       <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
-        <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
-          Игрон — онлайн-платформа для&nbsp;корпоративных, психологических,
-          настольных игр. Поддерживает одиночные и&nbsp;командные сессии,
-          редактор игровых объектов, демо-режим, 2D/3D-визуализацию
-          и&nbsp;offline-first мультиплеер.
-        </p>
+        <div className="flex flex-1 flex-col gap-3">
+          <p className="text-ink-muted text-xs font-semibold tracking-widest uppercase">
+            ООО «Игрон-сервис» · 02.2020—03.2024
+          </p>
+          <p className="text-xl leading-relaxed text-pretty md:text-3xl">
+            Игрон — онлайн-платформа для&nbsp;корпоративных, психологических,
+            настольных игр. Поддерживает одиночные и&nbsp;командные сессии,
+            редактор игровых объектов, демо-режим, 2D/3D-визуализацию
+            и&nbsp;offline-first мультиплеер.
+          </p>
+        </div>
       </div>
       <div
         className="animate-slide-up stagger-2 flex flex-col items-start gap-8 xl:flex-row"

@@ -9,10 +9,10 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Александр Шилов — Senior Frontend Developer",
-  description: "Senior Frontend Developer — резюме Александра Шилова",
+  title: "Александр Шилов — Senior FullStack Developer",
+  description: "Senior FullStack Developer — резюме Александра Шилова",
   openGraph: {
-    title: "Александр Шилов — Senior Frontend Developer",
+    title: "Александр Шилов — Senior FullStack Developer",
     type: "website",
     url: "https://ashlanderr.github.io/cv",
   },

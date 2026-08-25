@@ -2,12 +2,17 @@ export default function AisExpert() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
       <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
-        <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
-          АИС «Эксперт» — сервис для&nbsp;анализа и&nbsp;выявления нарушений
-          в&nbsp;медицинских данных. Использует машинное обучение для
-          прогнозирования ошибок и&nbsp;помогает экспертам ОМС проверять случаи
-          оказания медицинской помощи.
-        </p>
+        <div className="flex flex-1 flex-col gap-3">
+          <p className="text-ink-muted text-xs font-semibold tracking-widest uppercase">
+            ООО «Точка зрения» · 02.2019—11.2020
+          </p>
+          <p className="text-xl leading-relaxed text-pretty md:text-3xl">
+            АИС «Эксперт» — сервис для&nbsp;анализа и&nbsp;выявления нарушений
+            в&nbsp;медицинских данных. Использует машинное обучение для
+            прогнозирования ошибок и&nbsp;помогает экспертам ОМС проверять случаи
+            оказания медицинской помощи.
+          </p>
+        </div>
       </div>
       <img
         className="animate-scale-in stagger-2 w-full rounded-2xl border-2"
@@ -48,10 +53,10 @@ export default function AisExpert() {
             для&nbsp;отображения состояния задач машинного обучения.
             Пользователи могли запускать обучение моделей и&nbsp;в&nbsp;реальном
             времени наблюдать прогресс выполнения, получать уведомления
-            о&nbsp;завершении и&nbsp;результатах. Разработал промежуточный
-            прокси-сервер, преобразующий внутренний протокол заказчика
-            в&nbsp;WebSocket-формат, обеспечивший корректную работу
-            real-time-механизмов в&nbsp;веб-клиенте.
+            о&nbsp;завершении и&nbsp;результатах. Разработал на&nbsp;Kotlin
+            и&nbsp;Spring&nbsp;Boot промежуточный прокси-сервер, преобразующий
+            внутренний протокол заказчика в&nbsp;WebSocket-формат, обеспечивший
+            корректную работу real-time-механизмов в&nbsp;веб-клиенте.
           </p>
         </section>
       </div>
@@ -61,7 +66,7 @@ export default function AisExpert() {
             Стек технологий
           </h2>
           <ul className="flex flex-wrap gap-4">
-            {["HTML", "CSS", "Vue.js", "Bootstrap", "Vuex", "WebSocket"].map((tech, i) => (
+            {["HTML", "CSS", "Vue.js", "Bootstrap", "Vuex", "WebSocket", "Kotlin", "Spring Boot"].map((tech, i) => (
               <li key={tech} className={`animate-scale-in stagger-${Math.min(i + 1, 16)}`}>{tech}</li>
             ))}
           </ul>

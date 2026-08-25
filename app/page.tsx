@@ -21,7 +21,7 @@ const keySkills = [
 
 const allSkills = [
   {
-    label: "Языки",
+    label: "Frontend: языки",
     special: false,
     items: [
       "JavaScript: ES2022, Proxy",
@@ -31,27 +31,18 @@ const allSkills = [
     ],
   },
   {
-    label: "Библиотеки",
+    label: "Frontend: фреймворки",
     special: false,
     items: [
       "React: Hooks, Suspense, Context API",
+      "Next.js",
       "Angular: RxJS",
       "Redux, MobX, Zustand",
       "Babylon.js, Recharts",
     ],
   },
   {
-    label: "Бэкенд",
-    special: false,
-    items: ["REST API", "React Query", "OAuth, JWT", "Zod, JSON Schema"],
-  },
-  {
-    label: "Тестирование",
-    special: false,
-    items: ["Jest", "Puppeteer", "TDD", "Vitest"],
-  },
-  {
-    label: "Оптимизация и качество",
+    label: "Frontend: производительность",
     special: false,
     items: [
       "React Dev Tools",
@@ -61,9 +52,34 @@ const allSkills = [
     ],
   },
   {
-    label: "Сборка",
+    label: "Backend: рантаймы",
     special: false,
-    items: ["Webpack, Vite", "NPM, Yarn", "CI / CD", "Docker"],
+    items: [
+      "Node.js: tRPC, Prisma, Socket.io",
+      "Python: FastAPI, SQLModel, Pydantic",
+      "Java/Kotlin: Spring Boot, Vert.x",
+      "Rust, Django, Express",
+    ],
+  },
+  {
+    label: "Backend: API и данные",
+    special: false,
+    items: ["REST API, WebSocket", "OAuth, JWT", "Zod, JSON Schema", "Swagger"],
+  },
+  {
+    label: "Backend: базы данных",
+    special: false,
+    items: ["PostgreSQL", "Redis", "Cassandra", "SQLite", "Yjs"],
+  },
+  {
+    label: "Тестирование",
+    special: false,
+    items: ["Jest", "Puppeteer", "TDD", "Vitest", "pytest"],
+  },
+  {
+    label: "Сборка и деплой",
+    special: false,
+    items: ["Webpack, Vite", "NPM, Yarn", "CI / CD", "Docker, Ansible"],
   },
   {
     label: "Инструменты разработки",
@@ -73,7 +89,7 @@ const allSkills = [
   {
     label: "ИИ-разработка",
     special: false,
-    items: ["KiloCode", "AI Agents", "Prompt Engineering", "LLM API"],
+    items: ["Claude Code", "AI Agents", "Prompt Engineering", "LLM API"],
   },
   {
     label: "Тимлидство",
@@ -165,7 +181,7 @@ export default function Home() {
               <span className="italic">Шилов</span>
             </h1>
             <p className="text-ink-muted mt-1 text-sm tracking-widest uppercase">
-              Senior Frontend Developer
+              Senior FullStack Developer
             </p>
           </div>
           <nav className="mt-1 grid grid-cols-[1fr_1fr] gap-x-6 gap-y-2 md:grid-cols-[auto_auto_auto_auto]">

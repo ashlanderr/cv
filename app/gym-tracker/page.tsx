@@ -2,14 +2,19 @@ export default function GymTracker() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
       <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
-        <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
-          Gym Tracker — мой пет-проект, PWA-приложение
-          для&nbsp;автоматизированного учёта силовых тренировок. Работает
-          офлайн, хранит данные на&nbsp;устройстве и&nbsp;синхронизируется через
-          CRDT при&nbsp;подключении к&nbsp;серверу. Поддерживает рекомендации
-          по&nbsp;прогрессии весов, историю тренировок и&nbsp;визуализацию
-          оборудования.
-        </p>
+        <div className="flex flex-1 flex-col gap-3">
+          <p className="text-ink-muted text-xs font-semibold tracking-widest uppercase">
+            Личный проект
+          </p>
+          <p className="text-xl leading-relaxed text-pretty md:text-3xl">
+            Gym Tracker — мой пет-проект, PWA-приложение
+            для&nbsp;автоматизированного учёта силовых тренировок. Работает
+            офлайн, хранит данные на&nbsp;устройстве и&nbsp;синхронизируется через
+            CRDT при&nbsp;подключении к&nbsp;серверу. Поддерживает рекомендации
+            по&nbsp;прогрессии весов, историю тренировок и&nbsp;визуализацию
+            оборудования.
+          </p>
+        </div>
       </div>
       <div className="flex flex-col items-start gap-16 lg:flex-row lg:gap-32">
         <div className="flex flex-1 flex-col gap-16 lg:gap-32">

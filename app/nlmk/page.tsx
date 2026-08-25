@@ -2,15 +2,20 @@ export default function Nlmk() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
       <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
-        <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
-          Динамическое управление выпусками (НЛМК) — промышленный сервис
-          для&nbsp;визуализации и&nbsp;анализа работы доменных печей.
-          В&nbsp;реальном времени отображает слои руды и&nbsp;кокса,
-          их&nbsp;плавление и&nbsp;статистику процессов, поддерживает
-          исторические сценарии, модульную конфигурацию печей и&nbsp;систему
-          рекомендаций для&nbsp;горновых. Из-за&nbsp;NDA часть внутренних
-          деталей скрыта, и&nbsp;получилось показать только один скрин.
-        </p>
+        <div className="flex flex-1 flex-col gap-3">
+          <p className="text-ink-muted text-xs font-semibold tracking-widest uppercase">
+            ПАО «НЛМК» · 06.2023—04.2026
+          </p>
+          <p className="text-xl leading-relaxed text-pretty md:text-3xl">
+            Динамическое управление выпусками (НЛМК) — промышленный сервис
+            для&nbsp;визуализации и&nbsp;анализа работы доменных печей.
+            В&nbsp;реальном времени отображает слои руды и&nbsp;кокса,
+            их&nbsp;плавление и&nbsp;статистику процессов, поддерживает
+            исторические сценарии, модульную конфигурацию печей и&nbsp;систему
+            рекомендаций для&nbsp;горновых. Из-за&nbsp;NDA часть внутренних
+            деталей скрыта, и&nbsp;получилось показать только один скрин.
+          </p>
+        </div>
       </div>
       <img
         className="animate-scale-in stagger-2 w-full rounded-2xl border-2"

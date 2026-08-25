@@ -2,13 +2,18 @@ export default function RedForester() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
       <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
-        <p className="flex-1 text-xl leading-relaxed text-pretty md:text-3xl">
-          RedForester (САТЭК) — корпоративный инструмент для&nbsp;управления
-          проектами, знаниями и&nbsp;мозговыми штурмами в&nbsp;формате mindmap.
-          Позволяет создавать масштабные карты с&nbsp;типизированными узлами,
-          которые превращают визуальные связи в&nbsp;осмысленные процессы —
-          от&nbsp;ТЗ и&nbsp;задач до&nbsp;спринтов и&nbsp;канбан-досок.
-        </p>
+        <div className="flex flex-1 flex-col gap-3">
+          <p className="text-ink-muted text-xs font-semibold tracking-widest uppercase">
+            ООО «НПП САТЭК плюс» · 07.2016—02.2020
+          </p>
+          <p className="text-xl leading-relaxed text-pretty md:text-3xl">
+            RedForester (САТЭК) — корпоративный инструмент для&nbsp;управления
+            проектами, знаниями и&nbsp;мозговыми штурмами в&nbsp;формате mindmap.
+            Позволяет создавать масштабные карты с&nbsp;типизированными узлами,
+            которые превращают визуальные связи в&nbsp;осмысленные процессы —
+            от&nbsp;ТЗ и&nbsp;задач до&nbsp;спринтов и&nbsp;канбан-досок.
+          </p>
+        </div>
       </div>
       <img
         className="animate-scale-in stagger-2 w-full rounded-2xl border-2"
