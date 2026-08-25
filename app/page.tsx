@@ -2,21 +2,19 @@ import Link from "next/link";
 
 const keySkills = [
   { label: "TypeScript", image: "/cv/home/ts.svg" },
-  { label: "JavaScript", image: "/cv/home/js.svg" },
   { label: "HTML5", image: "/cv/home/html5.svg" },
   { label: "CSS3", image: "/cv/home/css3.svg" },
+  { label: "NextJS", image: "/cv/home/nextjs.svg" },
   { label: "React", image: "/cv/home/react.svg" },
   { label: "React Query", image: "/cv/home/react-query.webp" },
   { label: "Tailwind", image: "/cv/home/tailwind.svg" },
-  { label: "NextJS", image: "/cv/home/nextjs.svg" },
   { label: "tRPC", image: "/cv/home/trpc.svg" },
-  { label: "Jest", image: "/cv/home/jest.svg" },
-  { label: "Puppeteer", image: "/cv/home/puppeteer.webp" },
-  { label: "Ansible", image: "/cv/home/ansible.svg" },
-  { label: "CI/CD", image: "/cv/home/ci-cd.svg" },
+  { label: "Prisma", image: "/cv/home/prisma.svg" },
+  { label: "PostgreSQL", image: "/cv/home/postgresql.svg" },
+  { label: "Socket.IO", image: "/cv/home/socketio.svg" },
   { label: "Docker", image: "/cv/home/docker.svg" },
-  { label: "Node", image: "/cv/home/nodejs.svg" },
-  { label: "RxJS", image: "/cv/home/rxjs.webp" },
+  { label: "Vitest", image: "/cv/home/vitest.svg" },
+  { label: "CI/CD", image: "/cv/home/ci-cd.svg" },
 ];
 
 const allSkills = [
@@ -207,7 +205,7 @@ export default function Home() {
 
       <section className="animate-slide-up stagger-2 mb-16 md:mb-24">
         <h2 className="text-ink-muted mb-5 text-xs font-semibold tracking-widest uppercase">
-          Ключевые навыки
+          Типичный стек
         </h2>
         <ul className="flex flex-wrap gap-2.5">
           {keySkills.map((skill, i) => (
