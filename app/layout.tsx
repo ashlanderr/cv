@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+import { YandexMetrica } from "@/app/components/YandexMetrica";
+import { CookieBanner } from "@/app/components/CookieBanner";
 
 const notoSans = Noto_Sans({
   variable: "--font-sans",
@@ -25,7 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${notoSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <CookieBanner />
+        <YandexMetrica />
+      </body>
     </html>
   );
 }
