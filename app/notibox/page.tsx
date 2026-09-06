@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
+import { BackLink } from "@/app/components/BackLink";
+
+export const metadata: Metadata = {
+  title: "NotiBox",
+};
+
 export default function NotiBox() {
   return (
     <div className="container mx-auto mt-8 mb-16 flex flex-col gap-16 px-4">
       <div className="animate-slide-up flex flex-col gap-0 2xl:flex-row 2xl:gap-8">
         <div className="flex flex-1 flex-col gap-3">
+          <BackLink />
           <p className="text-ink-muted text-xs font-semibold tracking-widest uppercase">
             Собственный продукт
           </p>
